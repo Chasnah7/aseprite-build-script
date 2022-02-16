@@ -2,36 +2,30 @@
 SETLOCAL EnableDelayedExpansion
 
 :: REMEMBER TO CONSULT README.MD FIRST!
+:: IF YOU RECIEVED THIS SCRIPT FROM ANYWHERE OTHER THAN https://github.com/Chasnah7/aseprite-build-script
+:: DOUBLE CHECK TO MAKE SURE IT HAS NOT BEEN MALICIOUSLY EDITED.
+:: THE AUTHOR CLAIMS NO LIABILITY NO WARRANTY FOR THIS SCRIPT
+:: USE AT YOUR OWN RISK.
 
 :: Paths
 
-:: Change DEPS path to your main working directory.
-:: The working directory will be created for you if it does not already exist.
 set DEPS=E:\deps
 
-:: Path where aseprite source code will be unzipped into, DO NOT MODIFY!
 set ASEPRITE=%DEPS%\aseprite
 
-:: Path where Skia will be unzipped into, DO NOT MODIFY!
 set SKIA=%DEPS%\skia
 
-:: This path determines what URL aseprite source code is downloaded from, modify if you are building a different version of aseprite.
 set ASEZIP=https://github.com/aseprite/aseprite/releases/download/v1.2.33/Aseprite-v1.2.33-Source.zip
 
-:: This path determines what URL Skia is downloaded from, modify if your version of INSTALL.MD recommends a different version of Skia.
 set SKIAZIP=https://github.com/aseprite/skia/releases/download/m96-2f1f21b8a9/Skia-Windows-Release-x64.zip
 
-:: Path to Visual Studio 2019 or newer, modify if you have installed on a different drive and/or if using a different edition.
 set VISUALSTUDIO="C:\Program Files\Microsoft Visual Studio\2022\Community"
 
-:: This path is to check if the correct version of the Windows SDK is installed, modify if INSTALL.MD recommends a newer SDK version.
 set WINSDK="C:\Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.18362.0"
 
-:: Path to 7-Zip, alternate commented code if using the 32-bit version of 7-Zip.
 set ZIP="C:\Program Files\7-Zip"
 :: set ZIP="C:\Program Files (x86)\7-Zip"
 
-:: Path to TEMP directory for curls, modify if wished.
 set TEMP=C:\Temp
 
 :: EVERYTHING AFTER THIS POINT SHOULD BE AUTOMATED, DO NOT MODIFY UNLESS SOMETHING IS BROKEN!!!
@@ -168,7 +162,7 @@ if ERRORLEVEL 0 (
 echo All checks okay!
 echo .
 
-:: Build details
+:: Compile
 
 echo Building aseprite on Windows
 echo .
