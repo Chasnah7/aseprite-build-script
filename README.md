@@ -23,7 +23,7 @@ both the Aseprite source code and a pre-built package of Skia then run the build
 
      scoop install ninja cmake
 
-## Explaination of Paths
+## Explanation of Paths
 
 The user customizable portion of this script consists of paths. Most of these paths can be changed to better fit your build environment. Below is a short description of each path in order of appearance.
 
