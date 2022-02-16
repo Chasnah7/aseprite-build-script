@@ -21,7 +21,7 @@ both the Aseprite source code and a pre-built package of Skia then run the build
 * Windows SDK 10.0.18362.0 (Available via Visual Studio)
 * Installing [scoop](<https://scoop.sh/>) is recommended to install several dependencies:
 
-     scoop install ninja cmake
+         scoop install ninja cmake
 
 ## Explanation of Paths
 
