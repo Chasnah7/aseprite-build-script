@@ -75,4 +75,4 @@ The script will then begin the build process based on instructions from [INSTALL
 Upon completion the script will output a DIR command displaying the newly compiled aseprite.exe located in the
 %ASEPRITE%\build\bin directory. navigating to this directory you will find your newly created copies of the Aseprite executable and its data folder.
 
-Enjoy using Asprite!
+Enjoy using Aseprite!
