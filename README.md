@@ -6,7 +6,7 @@
 
 Please refer to Aseprite's [INSTALL.md](https://github.com/aseprite/aseprite/blob/845ff177880822f33939cfbe58ca5bebaf4efbea/INSTALL.md) to check for any updates to Aseprite installation procedure.
 
-This script was tested on Windows 10 & 11 with Visual Studio 2022 Community and is designed for x64 based systems.
+This script was tested on Windows 10 & 11 with Visual Studio 2022 Community and is targeted for x64 based systems.
 
 As long as all dependencies are met and all paths are correct this script will automatically download and extract
 both the Aseprite source code and a pre-built package of Skia then run the build process.
@@ -33,7 +33,7 @@ The user customizable portion of this script consists of paths. Most of these pa
 
 2. ASEPRITE
 
-    * Path where aseprite source code will be unzipped into, directory is created for you. DO NOT MODIFY!
+    * Path where Aseprite source code will be unzipped into, directory is created for you. DO NOT MODIFY!
 
 3. SKIA
 
@@ -65,8 +65,10 @@ The user customizable portion of this script consists of paths. Most of these pa
 
 ## Details
 
-After adjusting paths to fit your build environment simply execute the script and it will run completely hands off,
-creating your specified working directory and all subdirectories.
+Although Aseprite's build guide recommends using Visual Studio 2019 this version of VS is no longer easily downloadable through Microsoft,
+this script instead uses VS 2022 by default as Aseprite still builds on the newer version.
+
+After adjusting paths to fit your build environment simply execute the script and it will run completely hands off, creating your specified working directory and all subdirectories.
 
 Aseprite source code and a pre-built copy of Skia are curled into the temp directory and extracted into their respective subdirectories.
 

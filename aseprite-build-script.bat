@@ -9,7 +9,7 @@ SETLOCAL EnableDelayedExpansion
 
 :: Paths
 
-set DEPS=E:\deps
+set DEPS=C:\deps
 
 set ASEPRITE=%DEPS%\aseprite
 
@@ -111,7 +111,7 @@ if not exist %DEPS% (
 )
 if ERRORLEVEL 1 (
     echo Something went wrong in checking for or creating the deps directory.
-    echo Did you set the correct DEPS path for you system?
+    echo Did you set the correct DEPS path for your system?
     exit /b 1
 )
 
@@ -130,6 +130,9 @@ if not exist %ASEPRITE%\NUL (
 )
 if ERRORLEVEL 1 (
     echo Aseprite failed to download and extract
+    echo Is TEMP correctly set?
+    echo Are you connected to the internet?
+    echo Does ASEZIP point to the correct URL?
     echo Fatal error. Aborting...
     exit /b 1
 )
@@ -152,6 +155,9 @@ if not exist %SKIA%\NUL (
 )
 if ERRORLEVEL 1 (
     echo Skia failed to download and extract
+    echo Is TEMP correctly set?
+    echo Are you connected to the internet?
+    echo Does SKIAZIP point to the correct URL?
     echo Fatal Error. Aborting...
     exit /b 1
 )
@@ -164,7 +170,7 @@ echo .
 
 :: Compile
 
-echo Building aseprite on Windows
+echo Building Aseprite on Windows
 echo .
 
 call %VISUALSTUDIO%\Common7\Tools\VsDevCmd.bat -arch=x64
