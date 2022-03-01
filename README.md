@@ -78,3 +78,9 @@ Upon completion the script will output a DIR command displaying the newly compil
 %ASEPRITE%\build\bin directory. navigating to this directory you will find your newly created copies of the Aseprite executable and its data folder.
 
 Enjoy using Aseprite!
+
+## InDev
+
+* Currently writing up a macOS script that functions similarly to the current windows batch file. Will include prebuild checks for dependencies and customizable paths.
+
+* Possible linux based scripts in the future.
