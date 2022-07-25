@@ -17,7 +17,7 @@ both the Aseprite source code and a pre-built package of Skia then run the build
 * The latest version of [Cmake](https://cmake.org) (3.14 or greater)
 * [Curl](https://curl.se/) (Should be bundled with recent releases of Windows 10 and newer)
 * [Ninja](https://ninja-build.org/) build system
-* [Visual Studio 2019](https://visualstudio.microsoft.com/) or newer + Desktop Development with C++
+* [Visual Studio 2022](https://visualstudio.microsoft.com/) + Desktop Development with C++
 * Windows SDK 10.0.18362.0 (Available via Visual Studio)
 * Installing [scoop](<https://scoop.sh/>) is recommended to install several dependencies:
 
@@ -49,7 +49,7 @@ The user customizable portion of this script consists of paths. Most of these pa
 
 6. VISUALSTUDIO
 
-    * Path to Visual Studio 2019 or newer, modify if you have installed on a different drive and/or if using a different edition.
+    * Path to Visual Studio 2022, modify if you have installed on a different drive and/or if using a different edition.
 
 7. WINSDK
 
@@ -65,14 +65,16 @@ The user customizable portion of this script consists of paths. Most of these pa
 
 ## Details
 
-Although Aseprite's build guide recommends using Visual Studio 2019 this version of VS is no longer easily downloadable through Microsoft,
-this script instead uses VS 2022 by default as Aseprite still builds on the newer version.
+~~Although Aseprite's build guide recommends using Visual Studio 2019~~ ~~this version of VS is no longer easily downloadable through Microsoft,~~
+~~this script instead uses VS 2022 by default as Aseprite still builds on~~ ~~the newer version.~~
+
+Aseprite has recently been updated and now recommends Visual Studio 2022.
 
 After adjusting paths to fit your build environment simply execute the script and it will run completely hands off, creating your specified working directory and all subdirectories.
 
 Aseprite source code and a pre-built copy of Skia are curled into the temp directory and extracted into their respective subdirectories.
 
-The script will then begin the build process based on instructions from [INSTALL.md](https://github.com/aseprite/aseprite/blob/845ff177880822f33939cfbe58ca5bebaf4efbea/INSTALL.md).
+The script will then begin the build process based on instructions from [INSTALL.md](https://github.com/aseprite/aseprite/blob/main/INSTALL.md).
 
 Upon completion the script will output a DIR command displaying the newly compiled aseprite.exe located in the
 %ASEPRITE%\build\bin directory. navigating to this directory you will find your newly created copies of the Aseprite executable and its data folder.
@@ -83,4 +85,4 @@ Enjoy using Aseprite!
 
 * Currently writing up a macOS script that functions similarly to the current windows batch file. Will include prebuild checks for dependencies and customizable paths.
 
-* Possible linux based scripts in the future.
+* Working on a linux based script as well.
