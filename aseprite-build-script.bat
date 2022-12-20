@@ -15,7 +15,7 @@ set ASEPRITE=%DEPS%\aseprite
 
 set SKIA=%DEPS%\skia
 
-set ASEZIP=https://github.com/aseprite/aseprite/releases/download/v1.2.37/Aseprite-v1.2.37-Source.zip
+set ASEZIP=https://github.com/aseprite/aseprite/releases/download/v1.2.40/Aseprite-v1.2.40-Source.zip
 
 set SKIAZIP=https://github.com/aseprite/skia/releases/download/m102-861e4743af/Skia-Windows-Release-x64.zip
 
