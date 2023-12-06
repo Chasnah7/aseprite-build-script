@@ -11,7 +11,7 @@ This script was tested on Windows 10 & 11 with Visual Studio 2022 Community and 
 As long as all dependencies are met and all paths are correct this script will automatically download and extract
 both the Aseprite source code and a pre-built package of Skia then run the build process.
 
-If updating from a previous version of Aseprite make sure you delete your previous working directory (DEPS).
+If updating from a previous version of Aseprite make sure you delete the previous aseprite and skia directories in your working directory (DEPS).
 
 ## Dependencies
 
