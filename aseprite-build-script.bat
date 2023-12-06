@@ -15,13 +15,13 @@ set ASEPRITE=%DEPS%\aseprite
 
 set SKIA=%DEPS%\skia
 
-set ASEZIP=https://github.com/aseprite/aseprite/releases/download/v1.2.40/Aseprite-v1.2.40-Source.zip
+set ASEZIP=https://github.com/aseprite/aseprite/releases/download/v1.3.2/Aseprite-v1.3.2-Source.zip
 
 set SKIAZIP=https://github.com/aseprite/skia/releases/download/m102-861e4743af/Skia-Windows-Release-x64.zip
 
 set VISUALSTUDIO="C:\Program Files\Microsoft Visual Studio\2022\Community"
 
-set WINSDK="C:\Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.18362.0"
+set WINSDK="C:\Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.20348.0"
 
 set ZIP="C:\Program Files\7-Zip"
 :: set ZIP="C:\Program Files (x86)\7-Zip"
