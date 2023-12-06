@@ -39,6 +39,7 @@ if exist %ZIP%\7z.exe (
 if not exist %ZIP%\7z.exe (
     echo 7-Zip was not found
     echo Do you have the correct version uncommented?
+    echo Do you have the correct installation drive set?
     exit /b 1
 )
 
@@ -92,7 +93,7 @@ if exist %WINSDK% (
 )
 if not exist %WINSDK% (
     echo Correct Windows SDK version was not found
-    echo Did you install the recommended version with Desktop Development with C++ for VS?
+    echo Did you install the recommended version alongside Desktop Development with C++ for VS?
     echo Did you remember to update the path to the recommended version in INSTALL.MD?
     exit /b 1
 )
