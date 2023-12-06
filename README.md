@@ -76,7 +76,7 @@ Aseprite source code and a pre-built copy of Skia are curled into the temp direc
 The script will then begin the build process based on instructions from [INSTALL.md](https://github.com/aseprite/aseprite/blob/main/INSTALL.md).
 
 Upon completion the script will output a DIR command displaying the newly compiled aseprite.exe located in the
-%ASEPRITE%\build\bin directory. navigating to this directory you will find your newly created copies of the Aseprite executable and its data folder.
+%ASEPRITE%\build\bin directory. You can freely copy the executable and data folder located in the %ASEPRITE%\build\bin directory to a new location of your choosing.
 
 Enjoy using Aseprite!
 
