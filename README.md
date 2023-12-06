@@ -83,5 +83,6 @@ Enjoy using Aseprite!
 ## InDev
 
 * Currently writing up a macOS script that functions similarly to the current windows batch file. Will include prebuild checks for dependencies and customizable paths.
+    (Will most likely be it's own repository.)
 
 * Working on a linux based script as well.
