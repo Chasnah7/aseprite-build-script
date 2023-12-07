@@ -15,7 +15,7 @@ If updating from a previous version of Aseprite make sure you delete the previou
 
 ## Dependencies
 
-* [Tar] (Should be bundled with recent releases of Windows 10 and newer)
+* Tar (Should be bundled with recent releases of Windows 10 and newer)
 * The latest version of [Cmake](https://cmake.org) (3.14 or greater)
 * [Curl](https://curl.se/) (Should be bundled with recent releases of Windows 10 and newer)
 * [Ninja](https://ninja-build.org/) build system
