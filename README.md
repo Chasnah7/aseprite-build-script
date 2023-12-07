@@ -15,9 +15,9 @@ If updating from a previous version of Aseprite make sure you delete the previou
 
 ## Dependencies
 
-* Tar (Should be bundled with recent releases of Windows 10 and newer)
-* The latest version of [Cmake](https://cmake.org) (3.14 or greater)
-* [Curl](https://curl.se/) (Should be bundled with recent releases of Windows 10 and newer)
+* Tar (Bundled with recent releases of Windows 10 and newer)
+* The latest version of [Cmake](https://cmake.org) (3.16 or greater)
+* [Curl](https://curl.se/) (Bundled with recent releases of Windows 10 and newer)
 * [Ninja](https://ninja-build.org/) build system
 * [Visual Studio 2022](https://visualstudio.microsoft.com/) + Desktop Development with C++
 * Windows SDK 10.0.20348.0 (Available via Visual Studio)
@@ -79,6 +79,6 @@ Enjoy using Aseprite!
 ## InDev
 
 * Currently writing up a macOS script that functions similarly to the current windows batch file. Will include prebuild checks for dependencies and customizable paths.
-    (Will most likely be it's own repository.)
+    (Will be it's own repository.)
 
 * Working on a linux based script as well.
