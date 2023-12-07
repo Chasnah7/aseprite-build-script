@@ -23,25 +23,11 @@ set VISUALSTUDIO="C:\Program Files\Microsoft Visual Studio\2022\Community"
 
 set WINSDK="C:\Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.20348.0"
 
-set ZIP="C:\Program Files\7-Zip"
-:: set ZIP="C:\Program Files (x86)\7-Zip"
-
 set TEMP=C:\Temp
 
 :: EVERYTHING AFTER THIS POINT SHOULD BE AUTOMATED, DO NOT MODIFY UNLESS SOMETHING IS BROKEN!!!
 
 :: Dependencies check
-
-echo Checking for 7-Zip...
-if exist %ZIP%\7z.exe (
-    echo 7-Zip was found!
-)
-if not exist %ZIP%\7z.exe (
-    echo 7-Zip was not found
-    echo Do you have the correct version uncommented?
-    echo Do you have the correct installation drive set?
-    exit /b 1
-)
 
 echo Checking for ninja...
 where /q ninja
@@ -127,7 +113,7 @@ if not exist %ASEPRITE%\NUL (
     curl %ASEZIP% -L -o %TEMP%\asesrc.zip
     echo Unzipping to %ASEPRITE%...
     md %ASEPRITE%
-    %ZIP%\7z.exe x %TEMP%\asesrc.zip -o%ASEPRITE% -y
+    tar -xf %TEMP%\asesrc.zip -C %ASEPRITE%
 )
 if ERRORLEVEL 1 (
     echo Aseprite failed to download and extract
@@ -152,7 +138,7 @@ if not exist %SKIA%\NUL (
     curl %SKIAZIP% -L -o %TEMP%\skia.zip
     echo Unzipping to %SKIA%...
     md %SKIA%
-    %ZIP%\7z.exe x %TEMP%\skia.zip -o%SKIA% -y
+    tar -xf %TEMP%\skia.zip -C %SKIA%
 )
 if ERRORLEVEL 1 (
     echo Skia failed to download and extract

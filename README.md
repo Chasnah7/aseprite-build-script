@@ -15,7 +15,7 @@ If updating from a previous version of Aseprite make sure you delete the previou
 
 ## Dependencies
 
-* [7-Zip](https://7-zip.org/) (64-bit recommended)
+* [Tar] (Should be bundled with recent releases of Windows 10 and newer)
 * The latest version of [Cmake](https://cmake.org) (3.14 or greater)
 * [Curl](https://curl.se/) (Should be bundled with recent releases of Windows 10 and newer)
 * [Ninja](https://ninja-build.org/) build system
@@ -57,11 +57,7 @@ The user customizable portion of this script consists of paths. Most of these pa
 
     * This path is to check if the correct version of the Windows SDK is installed, modify if INSTALL.MD recommends a newer SDK version.
 
-8. ZIP
-
-    * Path to 7-Zip, alternate commented code if using the 32-bit version of 7-Zip.
-
-9. TEMP
+8. TEMP
 
     * Path to temporary directory for curls.
 
@@ -76,7 +72,7 @@ Aseprite source code and a pre-built copy of Skia are curled into the temp direc
 The script will then begin the build process based on instructions from [INSTALL.md](https://github.com/aseprite/aseprite/blob/main/INSTALL.md).
 
 Upon completion the script will output a DIR command displaying the newly compiled aseprite.exe located in the
-%ASEPRITE%\build\bin directory. You can freely copy the executable and data folder located in the %ASEPRITE%\build\bin directory to a new location of your choosing.
+%ASEPRITE%\build\bin directory. You can freely copy the executable and data folder located in the previously mentioned bin directory to a new location of your choosing.
 
 Enjoy using Aseprite!
 
