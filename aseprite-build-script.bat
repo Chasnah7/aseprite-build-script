@@ -4,7 +4,7 @@ SETLOCAL EnableDelayedExpansion
 :: REMEMBER TO CONSULT README.MD FIRST!
 :: IF YOU RECIEVED THIS SCRIPT FROM ANYWHERE OTHER THAN https://github.com/Chasnah7/aseprite-build-script
 :: DOUBLE CHECK TO MAKE SURE IT HAS NOT BEEN MALICIOUSLY EDITED.
-:: THE AUTHOR CLAIMS NO LIABILITY NO WARRANTY FOR THIS SCRIPT
+:: THE AUTHOR CLAIMS NO LIABILITY NOR WARRANTY FOR THIS SCRIPT
 :: USE AT YOUR OWN RISK.
 
 :: Paths
@@ -105,6 +105,7 @@ if ERRORLEVEL 1 (
 echo Checking for aseprite checkout...
 if exist %ASEPRITE%\NUL (
     echo Aseprite was found
+    goto skia
 )
 if not exist %ASEPRITE%\NUL (
     echo Aseprite was not found
@@ -127,9 +128,11 @@ if ERRORLEVEL 0 (
     echo Aseprite was successfully downloaded and unzipped
 )
 
+:skia
 echo Checking for Skia...
 if exist %SKIA%\NUL (
     echo Skia was found
+    goto check
 )
 if not exist %SKIA%\NUL (
     echo Skia was not found
@@ -152,6 +155,7 @@ if ERRORLEVEL 0 (
     echo Skia was successfully downloaded and unzipped
 )
 
+:check
 echo All checks okay!
 echo .
 
@@ -168,10 +172,16 @@ cd build
 call cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DLAF_BACKEND=skia -DSKIA_DIR=%SKIA% -DSKIA_LIBRARY_DIR=%SKIA%\out\Release-x64 -DSKIA_LIBRARY=%SKIA%\out\Release-x64\skia.lib -G Ninja ..
 call ninja aseprite
 if ERRORLEVEL 1 (
+    echo Failed to compile
+    echo Are you using the correct version of Skia?
+    echo Was aseprite properly downloaded? Make sure the %ASEPRITE% directory isn't empty.
+    echo If you edited aseprite's source code you may have made an error, consult the compiler's output.
     echo Fatal error. Aborting...
     popd
     exit /b %ERRORLEVEL%
 )
 
 echo Build complete
-dir %ASEPRITE%\build\bin\aseprite.exe
+echo Finished build is located in the %ASEPRITE%/build/bin directory.
+dir %ASEPRITE%\build\bin\
+echo The aseprite executable and data folder listed above can be moved to a location of your choosing.

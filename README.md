@@ -2,7 +2,7 @@
 
 **Created by [Chasnah](https://chasnah7.github.io/)**
 
-## A customizable automated Windows batch script for easily compiling Aseprite
+## A customizable, automated Windows batch script for easily compiling Aseprite
 
 Please refer to Aseprite's [INSTALL.md](https://github.com/aseprite/aseprite/blob/845ff177880822f33939cfbe58ca5bebaf4efbea/INSTALL.md) to check for any updates to Aseprite installation procedure.
 
@@ -10,8 +10,6 @@ This script was tested on Windows 10 & 11 with Visual Studio 2022 Community and 
 
 As long as all dependencies are met and all paths are correct this script will automatically download and extract
 both the Aseprite source code and a pre-built package of Skia then run the build process.
-
-If updating from a previous version of Aseprite make sure you delete the previous aseprite and skia directories in your working directory (DEPS).
 
 ## Dependencies
 
@@ -61,6 +59,12 @@ The user customizable portion of this script consists of paths. Most of these pa
 
     * Path to temporary directory for curls.
 
+## Updating
+
+* If you have previously run the script and have changed the URL for ASEZIP, please make sure to delete the previous aseprite directory in the working directory (DEPS).
+
+* If you change the URL for SKIAZIP, please make sure to delete the skia directory in the working directory (DEPS).
+
 ## Details
 
 Aseprite recommends using Visual Studio 2022 and the latest version of the Windows 10 SDK (Currently 20348).
@@ -71,14 +75,7 @@ Aseprite source code and a pre-built copy of Skia are curled into the temp direc
 
 The script will then begin the build process based on instructions from [INSTALL.md](https://github.com/aseprite/aseprite/blob/main/INSTALL.md).
 
-Upon completion the script will output a DIR command displaying the newly compiled aseprite.exe located in the
+Upon completion the script will output a directory listing of the newly compiled aseprite.exe located in the
 %ASEPRITE%\build\bin directory. You can freely copy the executable and data folder located in the previously mentioned bin directory to a new location of your choosing.
 
 Enjoy using Aseprite!
-
-## InDev
-
-* Currently writing up a macOS script that functions similarly to the current windows batch file. Will include prebuild checks for dependencies and customizable paths.
-    (Will be it's own repository.)
-
-* Working on a linux based script as well.
