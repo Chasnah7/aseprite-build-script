@@ -1,6 +1,6 @@
 # Aseprite-Build-Script
 
-**Created by [Chasnah](https://chasnah7.github.io/)**
+**Created by [Chasnah](https://chasnah.com/)**
 
 ## A customizable, automated Windows batch script for easily compiling Aseprite
 
