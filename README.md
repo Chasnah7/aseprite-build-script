@@ -4,12 +4,18 @@
 
 ## A customizable, automated Windows batch script for easily compiling Aseprite
 
-Please refer to Aseprite's [INSTALL.md](https://github.com/aseprite/aseprite/blob/845ff177880822f33939cfbe58ca5bebaf4efbea/INSTALL.md) to check for any updates to Aseprite installation procedure.
+Please refer to Aseprite's [INSTALL.md](https://github.com/aseprite/aseprite/blob/v1.3.10.1/INSTALL.md) to check for any updates to Aseprite installation procedure.
 
-This script was tested on Windows 10 & 11 with Visual Studio 2022 Community and is targeted for x64 based systems.
+This script was tested on Windows 10 & 11 with Visual Studio 2022 Community and is targeted at x64 based systems.
 
 As long as all dependencies are met and all paths are correct this script will automatically download and extract
 both the Aseprite source code and a pre-built package of Skia then run the build process.
+
+## NOTICE OF ANTIVIRUS FALSE POSITIVE
+
+There is currently an issue with Windows Defender falsely identify the aseprite source code zip file as containing a trojan. This will cause an error during the download portion of the script.
+Temporarily disable real-time protection in Windows Defender before running the script and remember to re-enable protection afterwards.
+PLEASE MAKE SURE YOU FULLY TRUST THE CONTENTS OF THE SCRIPT BEFORE RUNNING AND THAT YOU HAVE DOWNLOADED IT ONLY FROM THE ORIGINAL GITHUB PAGE!
 
 ## Dependencies
 
@@ -27,43 +33,46 @@ both the Aseprite source code and a pre-built package of Skia then run the build
 
 The user customizable portion of this script consists of paths. Most of these paths can be changed to better fit your build environment. Below is a short description of each path in order of appearance.
 
-1. DEPS
+1. WORKING
+    * Main working directory for compiling. Recommended to make a separate directory from where the script is run from so it can be easily deleted to build a fresh copy of aseprite.
+
+2. DEPS
 
     * Change DEPS path to your main working directory. The working directory will be created for you if it does not already exist.
 
-2. ASEPRITE
+3. ASEPRITE
 
     * Path where Aseprite source code will be unzipped into, directory is created for you. DO NOT MODIFY!
 
-3. SKIA
+4. SKIA
 
     * Path where Skia will be unzipped into, directory is created for you. DO NOT MODIFY!
 
-4. ASEZIP
+5. ASEZIP
 
     * Determines what URL aseprite source code is downloaded from, modify if you are building a different version of aseprite.
 
-5. SKIAZIP
+6. SKIAZIP
 
     * Determines what URL Skia is downloaded from, modify if your version of INSTALL.MD recommends a different version of Skia.
 
-6. VISUALSTUDIO
+7. VISUALSTUDIO
 
     * Path to Visual Studio 2022, modify if you have installed on a different drive and/or if using a different edition.
 
-7. WINSDK
+8. WINSDK
 
     * This path is to check if the correct version of the Windows SDK is installed, modify if INSTALL.MD recommends a newer SDK version.
 
-8. TEMP
+9. TEMP
 
     * Path to temporary directory for curls.
 
 ## Updating
 
-* If you have previously run the script and have changed the URL for ASEZIP, please make sure to delete the previous aseprite directory in the working directory (DEPS).
+* If you have previously run the script and have changed the URL for ASEZIP, please make sure to delete the previous aseprite directory in the working directory (%DEPS%), and the source code ZIP file in your temp directory (%TEMP).
 
-* If you change the URL for SKIAZIP, please make sure to delete the skia directory in the working directory (DEPS).
+* If you change the URL for SKIAZIP, please make sure to delete the skia directory in the working directory (%DEPS%), and the Skia ZIP file in your temp directory (%TEMP%).
 
 ## Details
 
@@ -79,3 +88,7 @@ Upon completion the script will output a directory listing of the newly compiled
 %ASEPRITE%\build\bin directory. You can freely copy the executable and data folder located in the previously mentioned bin directory to a new location of your choosing.
 
 Enjoy using Aseprite!
+
+## Changelog
+
+* 12/13/2024 - Updated to aseprite 1.3.10.1, added script to automatically create the TEMP directory. Encapsulated DEPS and TEMP into WORKING directory for easy cleanup. Addressed issue with Windows Defender false-positive and a temporary workaround.

@@ -9,13 +9,15 @@ SETLOCAL EnableDelayedExpansion
 
 :: Paths
 
-set DEPS=C:\deps
+set WORKING=C:\asebuild
+
+set DEPS=%WORKING%\deps
 
 set ASEPRITE=%DEPS%\aseprite
 
 set SKIA=%DEPS%\skia
 
-set ASEZIP=https://github.com/aseprite/aseprite/releases/download/v1.3.2/Aseprite-v1.3.2-Source.zip
+set ASEZIP=https://github.com/aseprite/aseprite/releases/download/v1.3.10.1/Aseprite-v1.3.10.1-Source.zip
 
 set SKIAZIP=https://github.com/aseprite/skia/releases/download/m102-861e4743af/Skia-Windows-Release-x64.zip
 
@@ -23,7 +25,7 @@ set VISUALSTUDIO="C:\Program Files\Microsoft Visual Studio\2022\Community"
 
 set WINSDK="C:\Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.20348.0"
 
-set TEMP=C:\Temp
+set TEMP=%WORKING%\temp
 
 :: EVERYTHING AFTER THIS POINT SHOULD BE AUTOMATED, DO NOT MODIFY UNLESS SOMETHING IS BROKEN!!!
 
@@ -88,6 +90,37 @@ echo All dependencies met
 
 :: Beginning directory creation and downloads
 
+echo Checking for working directory...
+if exist %WORKING% (
+    echo Working directory found
+)
+if not exist %WORKING% (
+    echo Creating working directory
+    md %WORKING%
+)
+if ERRORLEVEL 1 (
+    echo Something went wrong in checking for or creating the working directory.
+    echo Did you set the correct WORKING path for your system?
+    echo Do you have permission to create the defined working directory?
+    echo Is the defined working directory on a writable drive?
+    exit /b 1
+)
+
+echo Checking for temp directory...
+if exist %TEMP% (
+    echo Temp directory found
+)
+if not exist %TEMP% (
+    echo Creating temp directory
+    md %TEMP%
+)
+if ERRORLEVEL 1 (
+    echo Something went wrong in checking for or creating the temp directory.
+    echo Did you set the correct TEMP path for your system?
+    echo Do you have permission to create the defined temp directory?
+    exit /b 1
+)
+
 echo Checking for deps directory...
 if exist %DEPS% (
     echo Deps directory found
@@ -99,6 +132,7 @@ if not exist %DEPS% (
 if ERRORLEVEL 1 (
     echo Something went wrong in checking for or creating the deps directory.
     echo Did you set the correct DEPS path for your system?
+    echo Do you have the proper write permissions for you working directory?
     exit /b 1
 )
 
@@ -118,6 +152,7 @@ if not exist %ASEPRITE%\NUL (
 )
 if ERRORLEVEL 1 (
     echo Aseprite failed to download and extract
+    echo Is Windows Defender blocking it as a false positive?
     echo Is TEMP correctly set?
     echo Are you connected to the internet?
     echo Does ASEZIP point to the correct URL?
