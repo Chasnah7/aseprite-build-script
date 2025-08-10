@@ -4,7 +4,7 @@
 
 ## A customizable, automated Windows batch script for easily compiling Aseprite
 
-Please refer to Aseprite's [INSTALL.md](https://github.com/aseprite/aseprite/blob/v1.3.13/INSTALL.md) to check for any updates to Aseprite installation procedure.
+Please refer to Aseprite's [INSTALL.md](https://github.com/aseprite/aseprite/blob/v1.3.14.2/INSTALL.md) to check for any updates to Aseprite installation procedure.
 
 This script was tested on Windows 10 & 11 with Visual Studio 2022 Community and is targeted at x64 based systems.
 
