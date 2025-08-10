@@ -17,9 +17,9 @@ set ASEPRITE=%DEPS%\aseprite
 
 set SKIA=%DEPS%\skia
 
-set ASEZIP=https://github.com/aseprite/aseprite/releases/download/v1.3.13/Aseprite-v1.3.13-Source.zip
+set ASEZIP=https://github.com/aseprite/aseprite/releases/download/v1.3.14.2/Aseprite-v1.3.14.4-Source.zip
 
-set SKIAZIP=https://github.com/aseprite/skia/releases/download/m102-861e4743af/Skia-Windows-Release-x64.zip
+set SKIAZIP=https://github.com/aseprite/skia/releases/download/m124-08a5439a6b/Skia-Windows-Release-x64.zip
 
 set VISUALSTUDIO="C:\Program Files\Microsoft Visual Studio\2022\Community"
 
