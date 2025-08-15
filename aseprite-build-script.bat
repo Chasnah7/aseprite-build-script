@@ -2,7 +2,7 @@
 SETLOCAL EnableDelayedExpansion
 
 :: REMEMBER TO CONSULT README.MD FIRST!
-:: IF YOU RECIEVED THIS SCRIPT FROM ANYWHERE OTHER THAN https://github.com/Chasnah7/aseprite-build-script
+:: IF YOU RECIEVED THIS SCRIPT FROM ANYWHERE OTHER THAN https://github.com/Chasnah7/aseprite-build-script OR https://codeberg.org/Chasnah/aseprite-build-script
 :: DOUBLE CHECK TO MAKE SURE IT HAS NOT BEEN MALICIOUSLY EDITED.
 :: THE AUTHOR CLAIMS NO LIABILITY NOR WARRANTY FOR THIS SCRIPT
 :: USE AT YOUR OWN RISK.
@@ -17,13 +17,13 @@ set ASEPRITE=%DEPS%\aseprite
 
 set SKIA=%DEPS%\skia
 
-set ASEZIP=https://github.com/aseprite/aseprite/releases/download/v1.3.13/Aseprite-v1.3.13-Source.zip
+set ASEZIP=https://github.com/aseprite/aseprite/releases/download/v1.3.14.2/Aseprite-v1.3.14.4-Source.zip
 
-set SKIAZIP=https://github.com/aseprite/skia/releases/download/m102-861e4743af/Skia-Windows-Release-x64.zip
+set SKIAZIP=https://github.com/aseprite/skia/releases/download/m124-08a5439a6b/Skia-Windows-Release-x64.zip
 
 set VISUALSTUDIO="C:\Program Files\Microsoft Visual Studio\2022\Community"
 
-set WINSDK="C:\Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.20348.0"
+set WINSDK="C:\Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.26100.0"
 
 set TEMP=%WORKING%\temp
 
